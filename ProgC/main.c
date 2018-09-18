@@ -1,7 +1,7 @@
 int main()
 {
-	oragen();
-	oramutato();
+	//oragen();
+	//oramutato();
 
 	//sakk();
 
@@ -12,6 +12,7 @@ int main()
 	//L2F4();
 	//L2F5();
 	//L2F6();
-	//L2F7();	
+	//L2F7();
+	angrybirds();
 	return 0;
 }

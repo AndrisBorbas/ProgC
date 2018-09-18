@@ -38,6 +38,12 @@
     <None Include="..\..\..\..\Desktop\c_puska.pdf">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ora.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="angry.svg">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="everything.h">

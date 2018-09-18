@@ -148,6 +148,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf" />
+    <None Include="angry.svg" />
+    <None Include="ora.svg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="everything.h" />
