@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="angrybirds.c" />
     <ClCompile Include="labor01.c" />
     <ClCompile Include="labor02.c" />
     <ClCompile Include="main.c" />
@@ -147,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="everything.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

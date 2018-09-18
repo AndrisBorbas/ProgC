@@ -73,7 +73,7 @@
     <line x1="500" y1="100" x2="500" y2="200" stroke="black" stroke-width="17" />
     <line x1="700" y1="153" x2="650" y2="240" stroke="black" stroke-width="17" />
     <line x1="846" y1="300" x2="759" y2="350" stroke="black" stroke-width="17" />
-    <line x1="491" y1="600" x2="500" y2="500" stroke="black" stroke-width="20" />
-    <line x1="699" y1="506" x2="500" y2="500" stroke="black" stroke-width="15" />
-    <line x1="716" y1="625" x2="500" y2="500" stroke="black" stroke-width="2" />
+    <line x1="508" y1="600" x2="500" y2="500" stroke="black" stroke-width="20" />
+    <line x1="482" y1="300" x2="500" y2="500" stroke="black" stroke-width="15" />
+    <line x1="750" y1="500" x2="500" y2="500" stroke="black" stroke-width="2" />
 </svg>

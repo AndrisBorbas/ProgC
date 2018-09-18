@@ -7,7 +7,7 @@ void oramutato()
 	orasvg = fopen("ora.svg", "a");
 	int sugar[3], vastag[3], ora, perc, mp;
 	double fok[3];
-	printf("ora perc mp:  ");
+	printf("ora perc mp: ");
 	scanf("%d %d %d", &ora, &perc, &mp);
 	fok[0] = ora * 30 + (perc * 6 / 60 * 5);
 	fok[1] = perc * 6 + (mp * 6 / 60);

@@ -30,10 +30,18 @@
     <ClCompile Include="labor01.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="angrybirds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf">
       <Filter>Resource Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="everything.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
