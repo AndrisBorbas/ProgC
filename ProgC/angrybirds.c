@@ -48,10 +48,14 @@ void calculateTrajectory() {
 	angrysvg = fopen("angry.svg", "a");
 	//delay(1);
 	HitReg Hits[100];
+	int x=EntityRadius + 50, y=Height - 100 - GroundHeight;
 	for (int i = 0; i < 30; i++) {
-		Hits[i].x = (speed * cos(arc) * i*4) + EntityRadius + 50;
-		Hits[i].y = (speed * sin(arc) * i*4 - (g / 2 * i*4 * i*4)) + Height - 100 - GroundHeight;
-		fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"15\" stroke=\"black\" fill=\"pink\" stroke-width=\"0\" />\n", Hits[i].x, Hits[i].y);
+		//Hits[i].x = (speed * cos(arc) * i*4) + EntityRadius + 50;
+		//Hits[i].y = (speed * sin(arc) * i*4 - (g / 2 * i*4 * i*4)) + Height - 100 - GroundHeight;
+		Hits[i].y = (x * tan(arc) - (32 * pow(x, 2)) / (2 * pow(speed, 2) * pow(cos(arc), 2)))+ Height - 100 - GroundHeight;
+
+		fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"15\" stroke=\"black\" fill=\"pink\" stroke-width=\"0\" />\n", x, Hits[i].y);
+		x+=10;
 	}
 	fcloseall;
 }
