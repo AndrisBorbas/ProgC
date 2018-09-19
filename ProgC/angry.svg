@@ -1,6 +1,8 @@
-<svg width="1920" height="900" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <rect x="0" y="0" width="1920" height="900" stroke="blue" fill="blue" stroke-width="0" />
-    <circle cx="85" cy="765" r="35" stroke="black" fill="red" stroke-width="5" />
-    <circle cx="1500" cy="500" r="35" stroke="black" fill="green" stroke-width="5" />
-    <rect x="5" y="860" width="1910" height="35" stroke="black" fill="green" stroke-width="5" />
+<svg width="1920" height="936" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <rect x="0" y="0" width="1920" height="936" stroke="blue" fill="blue" stroke-width="0" />
+    <rect x="1400" y="535" width="200" height="436" stroke="black" fill="#6e2b00" stroke-width="5" />
+    <rect x="5" y="896" width="1910" height="35" stroke="black" fill="green" stroke-width="5" />
+    <circle cx="1920" cy="0" r="140" stroke="black" fill="yellow" stroke-width="0" />
+    <circle cx="85" cy="801" r="35" stroke="black" fill="#c90628" stroke-width="5" />
+    <circle cx="1500" cy="500" r="35" stroke="black" fill="#75e543" stroke-width="5" />
 </svg>

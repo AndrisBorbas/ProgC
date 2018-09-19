@@ -1,5 +1,10 @@
 #pragma once
-typedef struct Kor{
-	char name[20];
+typedef struct Circle{
+	char color[50];
 	int x, y, r, stroke;
-} Kor;
+} Circle;
+
+typedef struct Rect{
+	char color[50];
+	int x, y, w, h, stroke;
+} Rect;
