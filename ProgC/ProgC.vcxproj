@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="angrybirds.c" />
+    <ClCompile Include="delay.c" />
     <ClCompile Include="labor01.c" />
     <ClCompile Include="labor02.c" />
     <ClCompile Include="main.c" />

@@ -33,6 +33,9 @@
     <ClCompile Include="angrybirds.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="delay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf">

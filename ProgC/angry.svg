@@ -5,4 +5,34 @@
     <circle cx="1920" cy="0" r="140" stroke="black" fill="yellow" stroke-width="0" />
     <circle cx="85" cy="801" r="35" stroke="black" fill="#c90628" stroke-width="5" />
     <circle cx="1500" cy="500" r="35" stroke="black" fill="#75e543" stroke-width="5" />
+    <circle cx="85" cy="801" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="144" cy="912" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="204" cy="1040" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="264" cy="1183" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="324" cy="1342" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="384" cy="1516" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="444" cy="1707" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="504" cy="1913" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="564" cy="2134" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="624" cy="2371" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="684" cy="2625" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="744" cy="2893" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="804" cy="3178" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="864" cy="3478" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="924" cy="3794" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="984" cy="4125" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1044" cy="4472" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1104" cy="4835" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1164" cy="5214" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1224" cy="5608" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1284" cy="6018" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1344" cy="6444" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1404" cy="6885" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1464" cy="7342" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1524" cy="7815" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1584" cy="8304" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1644" cy="8808" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1704" cy="9328" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1764" cy="9863" r="15" stroke="black" fill="pink" stroke-width="0" />
+    <circle cx="1824" cy="10414" r="15" stroke="black" fill="pink" stroke-width="0" />
 </svg>
