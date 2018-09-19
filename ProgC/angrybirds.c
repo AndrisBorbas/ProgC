@@ -19,20 +19,28 @@ void createGround(int groundheight) {
 	fcloseall;
 }
 
+void createBackground() {
+	angrysvg = fopen("angry.svg", "a");
+	fprintf(angrysvg, "    <rect x=\"0\" y=\"0\" width=\"%d\" height=\"%d\" stroke=\"blue\" fill=\"blue\" stroke-width=\"0\" />\n", Width, Height);
+	fcloseall;
+}
+
 void createEntities(Kor Entity) {
 	angrysvg = fopen("angry.svg", "a");
-	if (strcmp(Entity.name, "madar"))fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"black\" fill=\"red\" stroke-width=\"%d\" />\n", Entity.x, Entity.y, Entity.r, Entity.stroke);
-	if (strcmp(Entity.name, "malac"))fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"black\" fill=\"green\" stroke-width=\"%d\" />\n", Entity.x, Entity.y, Entity.r, Entity.stroke);
+	if (!strcmp(Entity.name, "madar")) {
+		fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"black\" fill=\"red\" stroke-width=\"%d\" />\n", Entity.x, Entity.y, Entity.r, Entity.stroke);
+	}
+	if (!strcmp(Entity.name, "malac")) {
+		fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"black\" fill=\"green\" stroke-width=\"%d\" />\n", Entity.x, Entity.y, Entity.r, Entity.stroke);
+	}
 	fcloseall;
 }
 
 void createSVG(Kor madar, Kor malac, int GroundHeight) {
-	angrysvg = fopen("angry.svg", "a");
+	createBackground();
 	createEntities(madar);
 	createEntities(malac);
 	createGround(GroundHeight);
-	//fprintf(angrysvg, );
-	fcloseall;
 }
 
 void angrybirds() {
@@ -43,7 +51,6 @@ void angrybirds() {
 	Kor Madar = { "madar", EntityRadius + 50, Height - 100 - GroundHeight, EntityRadius, EntityStroke };
 	Kor Malac = { "malac", 1500, 500, EntityRadius, EntityStroke };
 	createSVG(Madar, Malac, GroundHeight);
-	printf("%s", GroundColor);
 
 
 	angrysvg = fopen("angry.svg", "a");
