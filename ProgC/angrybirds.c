@@ -60,7 +60,6 @@ void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on 
 		}
 	}
 	db = j;
-	fcloseall;
 }
 
 ////////////////
