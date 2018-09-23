@@ -10,7 +10,7 @@ FILE *angrysvg;
 int Width = 1920, Height = 936, GroundHeight = 35, EntityRadius = 35, EntityStroke = 5, MalacX = 1500, MalacY = 500, Margin = 100, db;
 double g = 9.81, speed, arc;
 char GroundColor[] = "green";
-Hits talalt[100]/*, sortedtalalt[50]*/;
+Hits talalt[100]/*, sortedtalalt[50]*/; ///stores trajectories that hit the target
 
 void createObjects(Rect Object) {
 	fprintf(angrysvg, "    <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" stroke=\"black\" fill=\"%s\" stroke-width=\"%d\" />\n", Object.x - Object.w / 2, Object.y + EntityRadius, Object.w, Object.h, Object.color, EntityStroke);
@@ -49,7 +49,7 @@ void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on 
 				x = (speed * cos(arc) * c) + EntityRadius + 50;
 				y = (speed * sin(arc) * c + (g / 2 * c * c)) + Height - Margin - GroundHeight;
 
-				if (abs(MalacX - x) < EntityRadius*2 + EntityStroke && abs(MalacY - y) < EntityRadius + EntityStroke) {
+				if (pow((EntityRadius - EntityRadius), 2) <= pow((MalacX-x), 2) + pow((MalacY - y), 2) && pow((MalacX - x), 2) + pow((MalacY - y), 2) <= pow((EntityRadius + EntityRadius), 2)) {
 					talalt[j].speed = speed; talalt[j].arc = k;
 					printf("Sebesseg: %g Szog: %g\n", talalt[j].speed, talalt[j].arc);
 					j++;
