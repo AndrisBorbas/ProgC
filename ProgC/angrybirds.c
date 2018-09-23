@@ -7,10 +7,9 @@
 
 FILE *angrysvg;
 
-int Width = 1920, Height = 936, GroundHeight = 35, EntityRadius = 35, EntityStroke = 5, MalacX = 1500, MalacY = 500, Margin = 100, db;
-double g = 9.81, speed, arc;
+int Width = 1920, Height = 936, GroundHeight = 35, EntityRadius = 35, EntityStroke = 5, MalacX = 1500, MalacY = 500, Margin = 100;
+double g = 9.81;
 char GroundColor[] = "green";
-Hits talalt[100]/*, sortedtalalt[50]*/; ///stores trajectories that hit the target
 
 void createObjects(Rect Object) {
 	fprintf(angrysvg, "    <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" stroke=\"black\" fill=\"%s\" stroke-width=\"%d\" />\n", Object.x - Object.w / 2, Object.y + EntityRadius, Object.w, Object.h, Object.color, EntityStroke);
@@ -37,9 +36,28 @@ void createSVG(Circle madar, Circle malac, Rect malacground, int groundheight, C
 	createEntities(malac);
 }
 
-void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on target or not
-	int x, y, j = 0;
+void drawTrajectory(double darc, double dspeed) { ///draws out the trajectories that are on target
+	//delay(1);
+	int x, y;
 	double c;
+	//if (speed == 0 || arc == 0)return 0;
+	fprintf(angrysvg, "    <polyline points=\"");
+	for (int i = 0; i < 55; i++) {
+		c = i * 0.5;
+
+		x = (dspeed * cos(darc) * c) + EntityRadius + 50;
+		y = (dspeed * sin(darc) * c + (g / 2 * c * c)) + Height - Margin - GroundHeight;
+
+		if (y > Height + 150 || x > Width + 100)break;
+
+		fprintf(angrysvg, "%d,%d ", x, y);
+	}
+	fprintf(angrysvg, "\" stroke=\"pink\" fill=\"none\" stroke-width=\"1\" />\n");
+}
+
+void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on target or not
+	int x, y;
+	double c, speed, arc;
 	for (speed = 130; speed <= 160; speed = speed + 3) {
 		for (int k = 10; k <= 60; k = k + 5) {
 			arc = (k * -1) * 3.14159265359 / 180;
@@ -49,58 +67,15 @@ void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on 
 				x = (speed * cos(arc) * c) + EntityRadius + 50;
 				y = (speed * sin(arc) * c + (g / 2 * c * c)) + Height - Margin - GroundHeight;
 
-				if (pow((EntityRadius - EntityRadius), 2) <= pow((MalacX-x), 2) + pow((MalacY - y), 2) && pow((MalacX - x), 2) + pow((MalacY - y), 2) <= pow((EntityRadius + EntityRadius), 2)) {
-					talalt[j].speed = speed; talalt[j].arc = k;
-					printf("Sebesseg: %g Szog: %g\n", talalt[j].speed, talalt[j].arc);
-					j++;
+				if (pow((EntityRadius - EntityRadius), 2) <= pow((MalacX - x), 2) + pow((MalacY - y), 2) && pow((MalacX - x), 2) + pow((MalacY - y), 2) <= pow((EntityRadius + EntityRadius), 2)) {
+					drawTrajectory(arc, speed);
+					///k is in degrees, arc is in radians
+					printf("Sebesseg: %g Szog: %d\n", speed, k);
 					break;
 				}
 				if (y > Height || x > Width) break;
 			}
 		}
-	}
-	db = j;
-}
-
-////////////////
-///deprecated///
-/*void sortTrajectories() { ///sorts out trajectories that are equal or the same so they don't get drawn more than once
-	int j = 0;
-	for (int i = 1; i <= 1000; i++) {
-		if (talalt[i - 1].speed == talalt[i].speed && talalt[i - 1].arc == talalt[i].arc);
-		else {
-			sortedtalalt[j].speed = talalt[i - 1].speed;
-			sortedtalalt[j].arc = talalt[i - 1].arc;
-			if (sortedtalalt[j].speed == 0 || sortedtalalt[j].arc == 0)continue;
-			printf("Sebesseg: %g Szog: %g\n", sortedtalalt[j].speed, sortedtalalt[j].arc);
-			j++;
-		}
-	}
-	db = j;
-}*/
-
-void drawTrajectory() { ///draws out the trajectories that are on target
-	//delay(1);
-	int x, y;
-	double c;
-
-	for (int j = 0; j <= db; j++) {
-		speed = talalt[j].speed;
-		arc = talalt[j].arc;
-		if (speed == 0 || arc == 0)continue;
-		arc = (arc * -1) * 3.14159265359 / 180;
-		fprintf(angrysvg, "    <polyline points=\"");
-		for (int i = 0; i < 55; i++) {
-			c = i * 0.5;
-
-			x = (speed * cos(arc) * c) + EntityRadius + 50;
-			y = (speed * sin(arc) * c + (g / 2 * c * c)) + Height - Margin - GroundHeight;
-
-			if (y > Height + 150 || x > Width + 100)break;
-
-			fprintf(angrysvg, "%d,%d ", x, y);
-		}
-		fprintf(angrysvg, "\" stroke=\"pink\" fill=\"none\" stroke-width=\"1\" />\n");
 	}
 }
 
@@ -127,7 +102,6 @@ void angrybirds() {
 
 	calculateTrajectories(Malac);
 	//sortTrajectories();
-	drawTrajectory();
 
 	fprintf(angrysvg, "</svg>");
 	fclose(angrysvg);
