@@ -5,14 +5,10 @@ int main()
 
 	//sakk();
 
-	//labor01();
+	//angrybirds();
 
-	//L2F3a();
-	//L2F3b();
-	//L2F4();
-	//L2F5();
-	//L2F6();
-	//L2F7();
-	angrybirds();
+	//labor01();
+	//L2();
+	L34();
 	return 0;
 }

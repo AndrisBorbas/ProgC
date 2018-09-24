@@ -71,8 +71,17 @@ void L2F7() {
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 10; j++) {
 			if (i + j < 10)printf("%c ", szo[j + i]);
-			else printf("%c ", szo[j + i-10]);
+			else printf("%c ", szo[j + i - 10]);
 		}
 		printf("\n");
 	}
+}
+
+void L2() {
+	L2F3a();
+	L2F3b();
+	L2F4();
+	L2F5();
+	L2F6();
+	L2F7();
 }
