@@ -1,4 +1,5 @@
 #pragma once
+
 typedef struct Circle {
 	int x, y, r, stroke;
 	char color[8];
