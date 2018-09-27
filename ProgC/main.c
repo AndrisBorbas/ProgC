@@ -1,5 +1,7 @@
 int main()
 {
+	test();
+
 	//oragen();
 	//oramutato();
 
@@ -9,6 +11,6 @@ int main()
 
 	//labor01();
 	//L2();
-	L34();
+	//L34();
 	return 0;
 }

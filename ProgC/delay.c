@@ -3,15 +3,17 @@
 // To use time library of C 
 #include <time.h> 
 
-void delay(int number_of_seconds)
-{
-	// Converting time into milli_seconds 
-	int milli_seconds = 1000 * number_of_seconds;
-
+/// <summary>
+/// The thread sleeps for the given milliseconds
+/// </summary>
+/// <param name="number_of_milli_seconds">The number of milliseconds you want to wait</param>
+/// <returns>The actual number of milliseconds waited</returns>
+int delay (int number_of_milli_seconds){
 	// Stroing start time 
 	clock_t start_time = clock();
 
 	// looping till required time is not acheived 
-	while (clock() < start_time + milli_seconds)
+	while (clock() < start_time + number_of_milli_seconds)
 		;
+	return clock();
 }

@@ -147,6 +147,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="oramutato.c" />
     <ClCompile Include="sakk.c" />
+    <ClCompile Include="test.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf" />
