@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
+#include <string.h>
 
 typedef struct Datum {
 	int ev, ho, nap;
@@ -86,7 +87,7 @@ void versenyzo_kiir(Versenyzo v) {
 	printf("\n%s, %d.%d.%d, %d", v.nev, v.szuletes.ev, v.szuletes.ho, v.szuletes.nap, v.helyezes);
 }
 
-int L34F5() {
+void L34F5() {
 	Versenyzo versenyzok[5] = {
 		{ "Am Erika", {1984, 5, 6}, 1 },
 		{ "Break Elek", {1982, 9, 30}, 3 },
@@ -98,17 +99,63 @@ int L34F5() {
 	printf("\n%d", versenyzok[2].helyezes);
 	datum_kiir(versenyzok[4].szuletes);
 	printf("\n%c", versenyzok[1].nev[0]);
+	printf("\n%s", versenyzok[1].helyezes <= 3 ? "igen" : "nem");
+	printf("\n%s", versenyzok[4].helyezes < versenyzok[3].helyezes ? "igen" : "nem");
+	printf("\n%s", versenyzok[1].szuletes.ev == versenyzok[2].szuletes.ev ? "igen" : "nem");
 
 	for (int i = 0; i < 5; i++) {
 		versenyzo_kiir(versenyzok[i]);
 	}
 }
 
+int f0() {
+	return 1;
+}
 
+int f1(int a) {
+	return a + 1;
+}
+
+int f2(int a) {
+	return -a;
+}
+
+int f3(int a) {
+	return a * 2;
+}
+
+void L34F6() {
+	int a = 1, x;
+	bool isExit = false;
+	do {
+		printf("\n%d", a);
+		printf("\n0: Alapertelmezettek visszaallitasa (a=1)\n1: Hozzaad 1-et\n2: Megforditja az elojelet\n3: Szorozza 2-vel\n9: Kilepes\n");
+		scanf("%d", &x);
+		switch (x) {
+		default: break;
+		case 0:
+			a = f0();
+			break;
+		case 1:
+			a = f1(a);
+			break;
+		case 2:
+			a = f2(a);
+			break;
+		case 3:
+			a = f3(a);
+			break;
+		case 9:
+			isExit = true;
+			break;
+		}
+	} while (!isExit);
+}
 
 void L34() {
 	L34F2();
 	L34F3();
 	L34F4();
 	L34F5();
+	L34F6();
 }
