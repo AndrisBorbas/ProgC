@@ -1,3 +1,16 @@
+// ***********************************************************************
+// Assembly         : 
+// Author           : cxl20
+// Created          : 09-18-2018
+//
+// Last Modified By : cxl20
+// Last Modified On : 09-27-2018
+// ***********************************************************************
+// <copyright file="angrybirds.c" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -5,29 +18,64 @@
 #include <string.h>
 #include "everything.h"
 
+/// <summary>
+/// The angrysvg
+/// </summary>
 FILE *angrysvg;
 
+/// <summary>
+/// The width
+/// </summary>
 int Width = 1920, Height = 936, GroundHeight = 35, EntityRadius = 35, EntityStroke = 5, MalacX = 1500, MalacY = 500, Margin = 100;
+/// <summary>
+/// The g
+/// </summary>
 double g = 9.81;
+/// <summary>
+/// The ground color
+/// </summary>
 char GroundColor[] = "green";
 
+/// <summary>
+/// Creates the objects.
+/// </summary>
+/// <param name="Object">The object.</param>
 void createObjects(Rect Object) {
 	fprintf(angrysvg, "    <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" stroke=\"black\" fill=\"%s\" stroke-width=\"%d\" />\n", Object.x - Object.w / 2, Object.y + EntityRadius, Object.w, Object.h, Object.color, EntityStroke);
 }
 
+/// <summary>
+/// Creates the ground.
+/// </summary>
+/// <param name="groundheight">The groundheight.</param>
 void createGround(int groundheight) {
 	fprintf(angrysvg, "    <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" stroke=\"black\" fill=\"%s\" stroke-width=\"%d\" />\n", EntityStroke, Height - EntityStroke - GroundHeight, Width - EntityStroke * 2, GroundHeight, GroundColor, EntityStroke);
 }
 
+/// <summary>
+/// Creates the background.
+/// </summary>
 void createBackground() {
 	fprintf(angrysvg, "    <rect x=\"0\" y=\"0\" width=\"%d\" height=\"%d\" stroke=\"blue\" fill=\"blue\" stroke-width=\"0\" />\n", Width, Height);
 }
 
+/// <summary>
+/// Creates the entities.
+/// </summary>
+/// <param name="Entity">The entity.</param>
 void createEntities(Circle Entity) {
 	fprintf(angrysvg, "    <circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"black\" fill=\"%s\" stroke-width=\"%d\" />\n", Entity.x, Entity.y, Entity.r, Entity.color, Entity.stroke);
 }
 
-void createSVG(Circle madar, Circle malac, Rect malacground, int groundheight, Circle sun) { ///create visuals
+/// <summary>
+/// Creates the SVG.
+/// </summary>
+/// <param name="madar">The madar.</param>
+/// <param name="malac">The malac.</param>
+/// <param name="malacground">The malacground.</param>
+/// <param name="groundheight">The groundheight.</param>
+/// <param name="sun">The sun.</param>
+void createSVG(Circle madar, Circle malac, Rect malacground, int groundheight, Circle sun) {
 	createBackground();
 	createObjects(malacground);
 	createGround(groundheight);
@@ -36,7 +84,12 @@ void createSVG(Circle madar, Circle malac, Rect malacground, int groundheight, C
 	createEntities(malac);
 }
 
-void drawTrajectory(double darc, double dspeed) { ///draws out the trajectories that are on target
+/// <summary>
+/// Draws the trajectory.
+/// </summary>
+/// <param name="darc">The darc.</param>
+/// <param name="dspeed">The dspeed.</param>
+void drawTrajectory(double darc, double dspeed) {
 	//delay(1);
 	int x, y;
 	double c;
@@ -55,7 +108,11 @@ void drawTrajectory(double darc, double dspeed) { ///draws out the trajectories 
 	fprintf(angrysvg, "\" stroke=\"pink\" fill=\"none\" stroke-width=\"1\" />\n");
 }
 
-void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on target or not
+/// <summary>
+/// Calculates the trajectories.
+/// </summary>
+/// <param name="malac">The malac.</param>
+void calculateTrajectories(Circle malac) {
 	int x, y;
 	double c, speed, arc;
 	for (speed = 130; speed <= 160; speed = speed + 3) {
@@ -69,7 +126,6 @@ void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on 
 
 				if (pow((EntityRadius - EntityRadius), 2) <= pow((MalacX - x), 2) + pow((MalacY - y), 2) && pow((MalacX - x), 2) + pow((MalacY - y), 2) <= pow((EntityRadius + EntityRadius), 2)) {
 					drawTrajectory(arc, speed);
-					///k is in degrees, arc is in radians
 					printf("Sebesseg: %g Szog: %d\n", speed, k);
 					break;
 				}
@@ -80,6 +136,9 @@ void calculateTrajectories(Circle malac) { ///checks whether a trajectory is on 
 }
 
 
+/// <summary>
+/// Angrybirdses this instance.
+/// </summary>
 void angrybirds() {
 
 	angrysvg = fopen("angry.svg", "w");
