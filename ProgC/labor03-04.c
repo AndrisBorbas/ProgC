@@ -1,53 +1,19 @@
-// ***********************************************************************
-// Assembly         : 
-// Author           : cxl20
-// Created          : 09-24-2018
-//
-// Last Modified By : cxl20
-// Last Modified On : 09-28-2018
-// ***********************************************************************
-// <copyright file="labor03-04.c" company="">
-//     Copyright (c) . All rights reserved.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
 #include <string.h>
 
-/// <summary>
-/// Struct Datum
-/// </summary>
 typedef struct Datum {
-	/// <summary>
-	/// The ho
-	/// </summary>
 	int ev, ho, nap;
 } Datum;
 
-/// <summary>
-/// Struct Versenyzo
-/// </summary>
 typedef struct Versenyzo {
-	/// <summary>
-	/// The nev
-	/// </summary>
 	char nev[31];
-	/// <summary>
-	/// The szuletes
-	/// </summary>
 	Datum szuletes;
-	/// <summary>
-	/// The helyezes
-	/// </summary>
 	int helyezes;
 } Versenyzo;
 
-/// <summary>
-/// L34s the f2.
-/// </summary>
 void L34F2() {
 	int j = 0, negativ[10] = { 0 };
 	double szamok[10] = { 2.5, -69, 5.4, -8, -7.7, 6, 2.9, -10, -3, 9.8 };
@@ -66,28 +32,15 @@ void L34F2() {
 	}
 }
 
-/// <summary>
-/// Kobs the specified valos.
-/// </summary>
-/// <param name="valos">The valos.</param>
-/// <returns>double.</returns>
 double kob(double valos) {
 	return valos * valos * valos;
 }
 
-/// <summary>
-/// Abszoluts the specified valos.
-/// </summary>
-/// <param name="valos">The valos.</param>
-/// <returns>double.</returns>
 double abszolut(double valos) {
 	if (valos >= 0)return valos;
 	else return valos * -1;
 }
 
-/// <summary>
-/// L34s the f3.
-/// </summary>
 void L34F3() {
 	double i = -1;
 	while (i <= 1) {
@@ -96,31 +49,18 @@ void L34F3() {
 	}
 }
 
-/// <summary>
-/// Maganhangzoes the specified c.
-/// </summary>
-/// <param name="c">The c.</param>
-/// <returns>bool.</returns>
 bool maganhangzo(char c) {
 	if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
 		return true;
 	else return false;
 }
 
-/// <summary>
-/// Nagybetus the specified c.
-/// </summary>
-/// <param name="c">The c.</param>
-/// <returns>bool.</returns>
 bool nagybetu(char c) {
 	if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
 		return true;
 	else return false;
 }
 
-/// <summary>
-/// L34s the f4.
-/// </summary>
 void L34F4() {
 	char c;
 	int chardiff = 'a' - 'A';
@@ -139,25 +79,14 @@ void L34F4() {
 	}
 }
 
-/// <summary>
-/// Datums the kiir.
-/// </summary>
-/// <param name="d">The d.</param>
 void datum_kiir(Datum d) {
 	printf("\n%d.%d.%d", d.ev, d.ho, d.nap);
 }
 
-/// <summary>
-/// Versenyzoes the kiir.
-/// </summary>
-/// <param name="v">The v.</param>
 void versenyzo_kiir(Versenyzo v) {
 	printf("\n%s, %d.%d.%d, %d", v.nev, v.szuletes.ev, v.szuletes.ho, v.szuletes.nap, v.helyezes);
 }
 
-/// <summary>
-/// L34s the f5.
-/// </summary>
 void L34F5() {
 	Versenyzo versenyzok[5] = {
 		{ "Am Erika", {1984, 5, 6}, 1 },
@@ -179,44 +108,22 @@ void L34F5() {
 	}
 }
 
-/// <summary>
-/// F0s this instance.
-/// </summary>
-/// <returns>int.</returns>
 int f0() {
 	return 1;
 }
 
-/// <summary>
-/// F1s the specified a.
-/// </summary>
-/// <param name="a">a.</param>
-/// <returns>int.</returns>
 int f1(int a) {
 	return a + 1;
 }
 
-/// <summary>
-/// F2s the specified a.
-/// </summary>
-/// <param name="a">a.</param>
-/// <returns>int.</returns>
 int f2(int a) {
 	return -a;
 }
 
-/// <summary>
-/// F3s the specified a.
-/// </summary>
-/// <param name="a">a.</param>
-/// <returns>int.</returns>
 int f3(int a) {
 	return a * 2;
 }
 
-/// <summary>
-/// L34s the f6.
-/// </summary>
 void L34F6() {
 	int a = 1, x;
 	bool isExit = false;
@@ -245,9 +152,6 @@ void L34F6() {
 	} while (!isExit);
 }
 
-/// <summary>
-/// L34s this instance.
-/// </summary>
 void L34() {
 	L34F2();
 	L34F3();
