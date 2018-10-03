@@ -148,6 +148,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="oramutato.c" />
     <ClCompile Include="sakk.c" />
+    <ClCompile Include="szokevero.c" />
     <ClCompile Include="test.c" />
   </ItemGroup>
   <ItemGroup>

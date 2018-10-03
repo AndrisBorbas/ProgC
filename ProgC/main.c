@@ -12,12 +12,12 @@
 // <summary></summary>
 // ***********************************************************************
 /// <summary>
-/// Mains this instance.
+/// Main instance.
 /// </summary>
 /// <returns>int.</returns>
 int main()
 {
-	test();
+	//test();
 
 	//oragen();
 	//oramutato();
@@ -25,6 +25,8 @@ int main()
 	//sakk();
 
 	//angrybirds();
+
+	szokevero();
 
 	//labor01();
 	//L2();
