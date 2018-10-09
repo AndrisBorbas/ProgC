@@ -26,8 +26,9 @@ int main()
 
 	//angrybirds();
 
-	szokevero();
+	//szokevero();
 
+	kiszh3();
 	//labor01();
 	//L2();
 	//L34();

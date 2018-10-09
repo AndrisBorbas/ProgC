@@ -12,7 +12,7 @@ void kever(char*, int);
 
 //main
 void szokevero() {
-	char szo[50], szoveg[100000] = { '\0' };
+	char szo[50], szoveg[100000] = { 0 };
 	int n = sizeof(szo) / sizeof(szo[0]);
 	int k = 0;
 	//nem akar enterrel kijönni, "exit" vagy ctrl+z beírásával jön ki
@@ -20,6 +20,7 @@ void szokevero() {
 		if (strcmp(szo, "exit") == 0)break;
 		kever(szo, n);
 		//szöveg eltárolása
+
 		strcat(szoveg, szo);
 		strcat(szoveg, " ");
 		k++;

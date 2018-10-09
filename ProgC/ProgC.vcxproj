@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="angrybirds.c" />
     <ClCompile Include="delay.c" />
+    <ClCompile Include="kiszh3.c" />
     <ClCompile Include="labor01.c" />
     <ClCompile Include="labor02.c" />
     <ClCompile Include="labor03-04.c" />
