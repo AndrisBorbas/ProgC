@@ -28,9 +28,11 @@ int main()
 
 	//szokevero();
 
-	kiszh3();
+	//kiszh3();
 	//labor01();
 	//L2();
 	//L34();
+	//L6();
+	L7();
 	return 0;
 }

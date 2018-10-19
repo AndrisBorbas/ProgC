@@ -48,6 +48,12 @@
     <ClCompile Include="kiszh3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="labor06.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="labor07.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf">
