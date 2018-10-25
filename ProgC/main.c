@@ -15,6 +15,7 @@
 /// Main instance.
 /// </summary>
 /// <returns>int.</returns>
+#include <stdio.h>
 int main()
 {
 	//test();
@@ -33,6 +34,9 @@ int main()
 	//L2();
 	//L34();
 	//L6();
-	L7();
+	//L7();
+
+	printf("%s", sort_beolvas());
+
 	return 0;
 }

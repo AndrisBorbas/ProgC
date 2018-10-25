@@ -11,7 +11,8 @@ void L7() {
 void L71() {
 	int db;
 	scanf("%d", &db);
-	char* szamok = malloc((db+1) * sizeof(char));
+	char* szamok;
+	szamok = malloc((db+1) * sizeof(char));
 	for (int i = 0; i < db+1; i++) {
 		scanf("%c", &szamok[i]);
 	}
