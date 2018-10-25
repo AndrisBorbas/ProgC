@@ -36,7 +36,9 @@ int main()
 	//L6();
 	//L7();
 
-	printf("%s", sort_beolvas());
+	char* szoveg = sort_beolvas();
+	printf("%s", szoveg);
+	free(szoveg);
 
 	return 0;
 }
