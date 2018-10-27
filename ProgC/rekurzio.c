@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* kar_beolvas(int* db, char* string) {
-	(*db)=(*db)+1;
+char* kar_beolvas(int db) {
 	char kar;
-	scanf("%c", &kar);
-	if (kar == 10) {
-		string = (char*) malloc((*db)*sizeof(char));
-		string[(*db)-1] = '\0';
+	char* string = NULL;
+	int beolvasott = scanf("%c", &kar);
+	if (beolvasott != 1 || kar == '\n') {
+		string = (char*)malloc((db + 1) * sizeof(char));
+		string[db] = '\0';
 		return string;
 	}
-	string=kar_beolvas(db, string);
-	(*db) = (*db) - 1;
-	string[(*db)-1]=kar;
+	string = kar_beolvas(db + 1);
+	string[db] = kar;
 	return string;
 }
 
 char* sort_beolvas(void) {
-	int db = 0;
-	return kar_beolvas(&db, NULL);
+	return kar_beolvas(0);
 }

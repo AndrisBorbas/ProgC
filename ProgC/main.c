@@ -1,20 +1,3 @@
-// ***********************************************************************
-// Assembly         :
-// Author           : cxl20
-// Created          : 09-16-2018
-//
-// Last Modified By : cxl20
-// Last Modified On : 09-27-2018
-// ***********************************************************************
-// <copyright file="main.c" company="">
-//     Copyright (c) . All rights reserved.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
-/// <summary>
-/// Main instance.
-/// </summary>
-/// <returns>int.</returns>
 #include <stdio.h>
 int main()
 {
@@ -37,6 +20,8 @@ int main()
 	//L7();
 
 	char* szoveg = sort_beolvas();
+	printf("%s\n", szoveg);
+	szoveg = sort_beolvas();
 	printf("%s", szoveg);
 	free(szoveg);
 
