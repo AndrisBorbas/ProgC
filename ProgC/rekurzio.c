@@ -3,15 +3,16 @@
 
 char* kar_beolvas(int db) {
 	char kar;
-	char* string = NULL;
+	char* string;
 	int beolvasott = scanf("%c", &kar);
 	if (beolvasott != 1 || kar == '\n') {
 		string = (char*)malloc((db + 1) * sizeof(char));
 		string[db] = '\0';
-		return string;
 	}
-	string = kar_beolvas(db + 1);
-	string[db] = kar;
+	else {
+		string = kar_beolvas(db + 1);
+		string[db] = kar;
+	}
 	return string;
 }
 
