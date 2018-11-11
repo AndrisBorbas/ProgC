@@ -148,6 +148,7 @@
     <ClCompile Include="labor02.c" />
     <ClCompile Include="labor03-04.c" />
     <ClCompile Include="labor07.c" />
+    <ClCompile Include="labor10.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="oramutato.c" />
     <ClCompile Include="rekurzio.c" />

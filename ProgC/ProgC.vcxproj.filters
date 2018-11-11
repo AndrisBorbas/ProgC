@@ -57,6 +57,9 @@
     <ClCompile Include="rekurzio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="labor10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf">
