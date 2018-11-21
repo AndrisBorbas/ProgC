@@ -18,7 +18,8 @@ int main()
 	//L34();
 	//L6();
 	//L7();
-	L10();
+	//L10();
+	KZH5();
 
 	/*char* szoveg = sort_beolvas();
 	printf("%s\n", szoveg);
