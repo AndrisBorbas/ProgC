@@ -2,6 +2,7 @@
 int main()
 {
 	//test();
+	//rnd();
 
 	//oragen();
 	//oramutato();
@@ -19,7 +20,9 @@ int main()
 	//L6();
 	//L7();
 	//L10();
-	KZH5();
+	//KZH5();
+	//kzh6();
+	zh2();
 
 	/*char* szoveg = sort_beolvas();
 	printf("%s\n", szoveg);

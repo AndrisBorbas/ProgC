@@ -144,6 +144,7 @@
     <ClCompile Include="delay.c" />
     <ClCompile Include="kiszh3.c" />
     <ClCompile Include="kzh5.c" />
+    <ClCompile Include="kzh6.c" />
     <ClCompile Include="labor06.c" />
     <ClCompile Include="labor01.c" />
     <ClCompile Include="labor02.c" />
@@ -153,9 +154,11 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="oramutato.c" />
     <ClCompile Include="rekurzio.c" />
+    <ClCompile Include="rnd.c" />
     <ClCompile Include="sakk.c" />
     <ClCompile Include="szokevero.c" />
     <ClCompile Include="test.c" />
+    <ClCompile Include="zh2.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\c_puska.pdf" />
